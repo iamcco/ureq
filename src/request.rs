@@ -55,6 +55,10 @@ impl Request {
         }
     }
 
+    pub fn set_agent(&mut self, agent: Agent) {
+        self.agent = agent;
+    }
+
     #[inline(always)]
     /// Sets overall timeout for the request, overriding agent's configuration if any.
     pub fn timeout(mut self, timeout: time::Duration) -> Self {
